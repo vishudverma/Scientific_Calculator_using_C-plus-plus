@@ -7,7 +7,7 @@
 
 using namespace std;
 
-long double a[], sum=0, diff=0, prod=0, quo=0, log=0;
+long double a[], sum=0, diff=0, prod=0, quo=0, log_ans=0;
 
 //operating using array to maqximise output and manage 
 //memory in the best way ppossible will implement linked 
@@ -55,6 +55,15 @@ long double division(long double x[] = a)
     }
     return quo;
     // quo is the quotient
+}
+
+long double logarithmic(long double x[] = a)
+{
+    int size = sizeof(x)/sizeof(long double);
+    for(int i=0; i < 2; ++i)
+    {
+        
+    }
 }
 
 void main()
