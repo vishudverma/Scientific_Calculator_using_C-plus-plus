@@ -91,12 +91,12 @@ int main()
     push(&head, 10);
     push(&head, 12);
 
-    cout << "List before Deletion:";
+    cout << "List before Deletion: ";
     printList(head);
 
     deleteNode(&head, 7);
 
-    cout << "List after Deletion:";
+    cout << "List after Deletion: ";
     printList(head);
 
     return 0;
