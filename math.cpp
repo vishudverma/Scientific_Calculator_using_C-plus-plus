@@ -1,7 +1,6 @@
-/*this file contains all the operation logic and was the
-hardest to make cause i had to keep testing the logic again
-and again to fool-proof it just look at it*/
-
+// This file contains all the operation logic and was the
+// hardest to make cause i had to keep testing the logic again
+// and again to fool-proof it just look at it
 
 #include <iostream>
 #include <conio.h>

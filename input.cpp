@@ -1,3 +1,6 @@
+//This file contains all the necessary input paradigms and implementations will add it to main to use it to store the data and 
+//the to refer it later on as per need will also be looking to impliment the image scanning functionality this will be useful then
+
 #include <iostream>
 
 using namespace std;
