@@ -4,7 +4,7 @@
 using namespace std;
 
 double log_base(double x, double base) {
-    return log(x);
+    return log10(x);
 }
 
 int main() {

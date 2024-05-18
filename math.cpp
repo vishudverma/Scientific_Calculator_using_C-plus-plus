@@ -3,11 +3,11 @@
 // and again to fool-proof it just look at it
 
 #include <iostream>
-#include <conio.h>
+#include <cmath>
 
 using namespace std;
 
-long double a[], sum=0, diff=0, prod=0, quo=0, log_ans=0;
+long double a[], sum=0, diff=0, prod=0, quo=0;
 
 //operating using array to maqximise output and manage 
 //memory in the best way ppossible will implement linked 
@@ -57,14 +57,8 @@ long double division(long double x[] = a)
     // quo is the quotient
 }
 
-long double logarithmic(long double x[] = a)
-{
-    int size = sizeof(x)/sizeof(long double);
-    for(int i=0; i < 2; ++i)
-    {
-        
-    }
-}
+//I wanted to code the log and sin languages myself but since i have been unable to find any documentation on it yet im giving 
+//in the pressure and using cmath library(whose source code is also unavailable but hopefully ill be able to figure the operations out)
 
 void main()
 {
