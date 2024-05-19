@@ -7,58 +7,105 @@
 
 using namespace std;
 
-long double a[], sum=0, diff=0, prod=0, quo=0;
+class Operations{
+    long double ans = 0;
+    //operating using array to maximise output and manage 
+    //memory in the best way ppossible will implement linked 
+    //lists here  later
 
-//operating using array to maqximise output and manage 
-//memory in the best way ppossible will implement linked 
-//lists here  later
-
-long double add(long double x[]= a)
-{
-    int size = sizeof(x)/sizeof(long double);
-    for(int i=0; i < size; ++i)
+    /// @brief addition program
+    /// @param x array of numbers
+    /// @return gives the sum of all the numbers
+    long double add(long double x[])
     {
-        sum += x[i];
+        int size = sizeof(x)/sizeof(long double);
+        for(int i=0; i < size; ++i)
+        {
+            ans += x[i];
+        }
+
+        return ans;
     }
 
-    return sum;
-    // sum is the sum of n number
-}
-
-long double substract(long double x[]= a)
-{
-    for(int i=0; i < sizeof(x); ++i)
+    /// @brief substration program
+    /// @param x the array that contains both the values
+    /// @return final answer after all the number are compiled
+    long double substract(long double x[])
     {
-        diff += x[i];
+        for(int i=0; i < sizeof(x); ++i)
+        {
+            ans += x[i];
+        }
+        return ans;
     }
-    return diff;
-    // diff is the difference of n number
-}
 
-long double multiply(long double x[] = a)
-{
-    int size = sizeof(x)/sizeof(long double);
-    for(int i=0; i < size; ++i)
+    /// @brief multiplication of n numbers
+    /// @param x the array for the input
+    /// @return quotient of all the numbers at once
+    long double multiply(long double x[])
     {
-        prod *= x[i];
+        int size = sizeof(x)/sizeof(long double);
+        for(int i=0; i < size; ++i)
+        {
+            ans = 1;
+            ans *= x[i];
+        }
+        return ans;
     }
-    return prod;
-    // prod is the product of n number
-}
 
-long double division(long double x[] = a)
-{
-    int size = sizeof(x)/sizeof(long double);
-    for(int i=0; i < 2; ++i)
+    /// @brief division of all the number(taken 2 at a time)
+    /// @param x array of numbers
+    /// @return quotient 
+    long double division(long double x[])
     {
-        quo /= x[i];
+        int size = sizeof(x)/sizeof(long double);
+        for(int i=0; i < 2; ++i)
+        {
+            if(i == 0)
+            {
+                ans = x[i];//initialising the first number in the division the dividend
+            }
+            else
+            {
+                ans /= x[i];//dividing the dividend by the divisor
+            }
+        }
+        return ans;
     }
-    return quo;
-    // quo is the quotient
-}
 
-//I wanted to code the log and sin languages myself but since i have been unable to find any documentation on it yet im giving 
-//in the pressure and using cmath library(whose source code is also unavailable but hopefully ill be able to figure the operations out)
+    /// @brief perform the log operation
+    /// @param x array of number whose size is being found
+    /// @return final value after performin the log operation
+    long double logarithm(long double x[])
+    {
+        int size = sizeof(x)/sizeof(long double);
+        int ln,lg,b = 'e';//ln->natural log base e; lg->artificial log base 10;b->given base input
+        for(int i=0; i < size; ++i)
+        {
+            if(b == 'e'){
+                ln = log(x[i]);//log base e function
+                ans = ln;
+            }
+            else if(b == 10){
+                lg = log10(x[i]);//log base 10 function
+                ans = lg;
+            }
+            else{
+                double y,z,answ;
+                y = log(x[i]);
+                z = log(b);
+                answ = y/z;
+                ans = answ;//log base b function
+            }
+            return ans;
+        }
+    }
+    //plan to call sin and cos functions directly from the cmath library so not gonna write them here if some new code logic is to be made
+    //then i will write them here.
+    //I wanted to code the log and sin languages myself but since i have been unable to find any documentation on it yet im giving 
+    //in the pressure and using cmath library(whose source code is also unavailable but hopefully ill be able to figure the operations out)
+};
+
 
 void main()
 {
