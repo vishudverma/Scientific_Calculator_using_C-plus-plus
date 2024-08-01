@@ -107,7 +107,8 @@ class Operations{
 };
 
 
-void main()
+int main()
 {
     cout << "Math";
+    return 0;
 }
