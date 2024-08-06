@@ -16,7 +16,7 @@ class Linked_list_implement{
     //stock functions for using linked list
     //definitions of the basic command values push, print and pop
 
-    /// @brief pushes/addes the new value of linked-lis
+    /// @brief pushes adds the new value of linked-lis
     /// @param head_ref to take reference of the available memory from heap or the top of the current cell in the list(joining point)
     /// @param data the data that is to be stored within the list
     void push(input_value** head_ref, long double data){
