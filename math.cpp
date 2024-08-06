@@ -84,7 +84,7 @@ private:
         return pow(base, x);
     }
 
-    // Function to calculate absolute value
+    // Function to calculate absolute value used in logarithmic function
     double abs(double num) {
         return std::abs(num);
     }
