@@ -3,7 +3,7 @@
 #include <cmath>
 
 class Operations {
-private:
+public:
     // Function to add two numbers used in arithmetic 
     double add(double num1, double num2) {
         return num1 + num2;
@@ -173,7 +173,6 @@ private:
                 break;
             case 'al':
                 std::cout << "Result: " << antilog(num) << std::endl;
-                // by default it takes base 10
                 break;
             default:
                 std::cout << "Error: Invalid operation." << std::endl;

@@ -1,8 +1,9 @@
 #include <iostream>
-#include <cmath>
-#include "math.h"
+// #include "math.h"
 
 
 int main() {
-     return 0;
+    int num1;
+    std::cin >> num1;
+    return 0;
  }
